@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Payment Request Demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            body{
+                font-size: 2em;
+            }
+            
+            input, select, button{
+                font-size: 1.2em; 
+                width:50%;
+            }
+            
+            label{
+                display: inline-block;
+                font-size: 1em; 
+                width:30%;
+            }
+            button.startupNotShown{
+                display: none;
+            }
+        </style>
+        <section class="articles">
+            
+        </section>
+        <section class="newArticles">
+            <label>amount: </label>
+            <select name="amount">
+                <option value="1" selected>1x</option>
+                <option value="2">2x</option>
+                <option value="3">3x</option>
+            </select>
+            <br>
+            <label>name: </label>
+            <input name="name" value=""/>
+            <br>
+            <label>price: </label>
+            <select name="price">
+                <option value="5.99" selected>5.99€</option>
+                <option value="15.99">15.99€</option>
+                <option value="25.99">25.99€</option>
+            </select>
+            <br><br>
+            <button name="add">add</button><button class="startupNotShown" name="pay">pay</button>
+        </section>
+        <!-- make sure the most current js is loaded for developing -->
+        <script>
+            var date = Date.now();
+            document.write("<script src='pr.js?cachebreaker="+date+"'></"+"script>");
+        </script>
+    </body>
+</html>
