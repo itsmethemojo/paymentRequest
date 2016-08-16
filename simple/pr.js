@@ -31,7 +31,7 @@ payButton.addEventListener(
 );
 
 /**
- * creates Payment Request and sends it
+ * Creates Payment Request and sends it
  * 
  * @returns {undefined}
  */
@@ -71,7 +71,7 @@ function sendPaymentRequest(){
 }
 
 /**
- * collects all data shown in the details section of the payment request ui
+ * Collects all data shown in the details section of the payment request ui
  * 
  * @returns object details as shown here https://www.w3.org/TR/payment-request/#paymentrequest-constructor
  */
@@ -102,4 +102,4 @@ function collectCartDetails(){
             amount: { currency: 'EUR', value : total }}
     };
 };
-     
+        
