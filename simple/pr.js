@@ -12,7 +12,6 @@ addButton.addEventListener(
             name = "some stuff";
         }
         document.querySelector('section.articles').innerHTML += '<p><span class="amount">'+amount+'</span> x <span class="price">'+price+'</span>€ - <span class="name">' +name+"</span></p>";
-        document.querySelector('section.newArticles button[name=pay]').style="display:inline-block";
     }
 );
 
