@@ -57,6 +57,7 @@ function sendPaymentRequest(){
             .then(
                 function (response) {
                     console.log(JSON.stringify(response.details, null, 2));
+                    doSomethingWithResponse(JSON.stringify(response.details, null, 2));
                     response.complete("success");
                     return;
 
@@ -102,4 +103,12 @@ function collectCartDetails(){
             amount: { currency: 'EUR', value : total }}
     };
 };
-        
+
+
+/**
+ * shows response json in pre tag
+ */
+function doSomethingWithResponse(json){
+    document.querySelectorAll("section.json")[0].innerHTML = "<pre>" + json +  "</pre>";
+    location.href = "#response";
+}
